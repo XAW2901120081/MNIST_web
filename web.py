@@ -26,7 +26,7 @@ class Net(nn.Module):
 
 # 加载模型
 model = Net()
-model.load_state_dict(torch.load("D:\\APP\\Python\\pytorch\\Handwritten_digit_recognition\\model.pth"))
+model.load_state_dict(torch.load("web\\model.pth"))
 model.eval()
 
 # 定义图像预处理函数
