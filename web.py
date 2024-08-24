@@ -26,7 +26,8 @@ class Net(nn.Module):
 
 # 加载模型
 model = Net()
-model.load_state_dict(torch.load("https://github.com/XAW2901120081/web2/blob/master/model.pth"))
+url = "https://raw.githubusercontent.com/XAW2901120081/web2/master/model.pth"
+model.load_state_dict(torch.hub.load_state_dict_from_url(url, map_location=torch.device('cpu')))
 model.eval()
 
 # 定义图像预处理函数
